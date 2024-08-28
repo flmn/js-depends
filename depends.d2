@@ -1,23 +1,90 @@
-Nitro
-Vite
+classes: {
+  server: {
+    style: {
+      fill: "#023047"
+      font-color: white
+      stroke-width: 0
+    }
+  }
+
+  fx: {
+    style: {
+      fill: "#FFB703"
+      stroke-width: 0
+    }
+  }
+
+  kit: {
+    style: {
+      fill: "#FB8500"
+      stroke-width: 0
+    }
+  }
+
+  ui: {
+    style: {
+      fill: "#8ECAE6"
+      stroke-width: 0
+    }
+  }
+
+  build: {
+    style: {
+      fill: "#219EBC"
+      stroke-width: 0
+    }
+  }
+}
+
+Express.class: server
+Fastify.class: server
+h3.class: server
+Hono.class: server
+
+Nitro.class: fx
+Vinxi.class: fx
+
+NestJS.class: kit
+"Next.js".class: kit
+Nuxt.class: kit
+"Qwik City".class: kit
+Remix.class: kit
+SolidStart.class: kit
+SvelteKit.class: kit
+"TanStack Start".class: kit
+Vike.class: kit
+
+React.class: ui
+Solid.class: ui
+Svelte.class: ui
+"Vue.js".class: ui
+
+esbuild.class: build
+Rollup.class: build
+Turbo.class: build
+Vite.class: build
+Webpack.class: build
 
 SvelteKit -> Svelte
 SvelteKit -> Vite
 
-Nuxt -> "Vue.js"
-Nuxt -> Nitro
+"Qwik City" -> Vite
+"Qwik City" -> Qwik
+
 Nuxt -> Vite
+Nuxt -> Nitro
+Nuxt -> "Vue.js"
 
-SolidStart -> Vinxi
 SolidStart -> Solid
+SolidStart -> Vinxi
 
-Vinxi -> Nitro
 Vinxi -> Vite
+Vinxi -> Nitro
 
 Vike -> Vite
 
-Vite -> Rollup
 Vite -> esbuild
+Vite -> Rollup
 
 Nitro -> Rollup
 Nitro -> h3 -> esbuild
@@ -27,14 +94,15 @@ Nitro -> h3 -> esbuild
 "TanStack Start" -> React
 "TanStack Start" -> "TanStack Router"
 
-"Qwik City" -> Vite
-"Qwik City" -> Qwik
-
 Remix -> Vite
 Remix -> "React Router"
 Remix -> React
 
 "Next.js" -> React
 "Next.js" -> Webpack
+"Next.js" -> Turbo
 
 Hono -> esbuild
+
+NestJS -> Express
+NestJS -> Fastify
