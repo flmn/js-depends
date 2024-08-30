@@ -42,6 +42,7 @@ h3.class: server
 Hono.class: server
 
 Nitro.class: fx
+Vike.class: fx
 Vinxi.class: fx
 
 NestJS.class: kit
@@ -52,7 +53,6 @@ Remix.class: kit
 SolidStart.class: kit
 SvelteKit.class: kit
 "TanStack Start".class: kit
-Vike.class: kit
 
 Qwik.class: ui
 React.class: ui
@@ -60,11 +60,15 @@ Solid.class: ui
 Svelte.class: ui
 "Vue.js".class: ui
 
-esbuild.class: build
-Rollup.class: build
-Turbo.class: build
-Vite.class: build
+Rspack.class: build
 Webpack.class: build
+esbuild.class: build
+Rolldown.class: build
+Rollup.class: build
+SWC.class: build
+Turbopack.class: build
+Vite.class: build
+Babel.class: build
 
 SvelteKit -> Svelte
 SvelteKit -> Vite
@@ -76,34 +80,40 @@ Nuxt -> Vite
 Nuxt -> Nitro
 Nuxt -> "Vue.js"
 
-SolidStart -> Solid
 SolidStart -> Vinxi
+SolidStart -> Solid
 
 Vinxi -> Vite
 Vinxi -> Nitro
 
 Vike -> Vite
 
+Vite -> Rolldown
 Vite -> esbuild
 Vite -> Rollup
 
 Nitro -> Rollup
 Nitro -> h3 -> esbuild
 
-"TanStack Start" -> Vinxi
-"TanStack Start" -> Vite
 "TanStack Start" -> React
 "TanStack Start" -> "TanStack Router"
+"TanStack Start" -> Vite
+"TanStack Start" -> Vinxi
 
-Remix -> Vite
-Remix -> "React Router"
-Remix -> React
-
-"Next.js" -> React
 "Next.js" -> Webpack
-"Next.js" -> Turbo
+"Next.js" -> Turbopack
+"Next.js" -> React
+
+Remix -> React
+Remix -> "React Router"
+Remix -> Vite
 
 Hono -> esbuild
 
 NestJS -> Express
 NestJS -> Fastify
+
+Webpack -> Babel
+Webpack -> SWC
+
+Rspack -> SWC
